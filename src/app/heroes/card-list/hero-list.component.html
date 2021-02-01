@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="row justify-content-md-end">
+      <div class="col-4 col-md-6 col-sm-10">
+        <input type="text" id="search" [(ngModel)]="searchText" placeholder="Search to type">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm  align-self-center mt-4" *ngFor="let card of cardsList$ | async" >
+        <a [routerLink]="['/card', card.id]">
+          <div class="card">
+            <div class="upper">
+              <h6>{{card.provider.enae.product_name}}</h6>
+              <h4>{{card.premium}}</h4>
+            </div>
+            <div class="lower">
+              <h5 class="text-capitalize">{{card.insurance_type}}</h5>
+              <small>Excess - {{card.excess}} | Currency - {{card.currency}} | Time - {{card.provider.enae.time_to_policy}} month</small>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

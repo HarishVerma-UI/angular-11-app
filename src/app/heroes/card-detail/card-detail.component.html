@@ -1,0 +1,73 @@
+<div *ngIf="hero$ | async as hero">
+  <div class=" container-fluid my-5 ">
+    <div class="row justify-content-center ">
+      <div class="col-xl-10">
+        <div class="card shadow-lg ">
+          <div class="row p-2 mt-3 justify-content-between mx-sm-2">
+            <div class="col">
+              <p class="text-muted space mb-0 shop"> Insurance Type : {{hero.insurance_type}}</p>
+              <p class="text-muted space mb-0 shop">Id : {{hero.id}}</p>
+            </div>
+            <div class="col">
+              <div class="row justify-content-start ">
+                <div class="col"> <img class="irc_mi img-fluid cursor-pointer " src="https://www.pngitem.com/pimgs/m/594-5945117_life-insurance-icon-png-transparent-png.png" width="70" height="70"> </div>
+              </div>
+            </div>
+            <div class="col-auto"><a [routerLink]="['/cards']">BACK TO HOME</a></div>
+          </div>
+          <div class="row mx-auto justify-content-center text-center">
+            <div class="col-12 mt-3 ">
+              <nav aria-label="breadcrumb" class="second ">
+                <ol class="breadcrumb indigo lighten-6 first ">
+                  <li class="breadcrumb-item font-weight-bold"><a class="black-text text-uppercase active-2" href="#"><span class="mr-md-3 mr-1">Product Description</span></a></li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <div class="row justify-content-around">
+            <div class="col-md-5">
+              <div class="card border-0">
+                <div class="card-header pb-0">
+                  <h2 class="card-title space ">{{hero.provider.enae.product_name}}</h2>
+                  <p class="card-text text-muted mt-4 space">{{hero.provider.enae.description}}</p>
+                  <hr class="my-0">
+                </div>
+                <div class="card-body">
+                  <div class="row justify-content-between">
+                    <div class="col-auto mt-0">
+                      <a href="{{hero.provider.enae.terms_conditions_url}}">Terms Conditions</a> | {{hero.provider.enae.url_slug}} | {{hero.provider.enae.product_name}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 mb-5">
+              <div class="card ">
+                <div class="card-header card-2">
+                  <div class="card-text text-muted  space">
+                    <div class="row justify-content-between">
+                      <div class="row mt-4">
+                        <div class="col">
+                          <p class="text-muted mb-2">CARD COVERS</p>
+                          <hr class="mt-0">
+                          <div class="row justify-content-between text-uppercase border-bottom" *ngFor="let cover of hero.covers ">
+                            <div class="col">
+                              <p class="mb-1 text-muted">{{cover.name}}</p>
+                            </div>
+                            <div class="flex-sm-col col-auto">
+                              <p class="mb-1 text-muted">{{cover.type}}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
