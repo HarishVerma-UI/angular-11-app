@@ -8,10 +8,10 @@ import { CardService } from '../card.service';
 
 @Component({
   selector: 'app-hero-list',
-  templateUrl: './hero-list.component.html',
-  styleUrls: ['./hero-list.component.css']
+  templateUrl: './card-list.component.html',
+  styleUrls: ['./card-list.component.css']
 })
-export class HeroListComponent implements OnInit {
+export class CardListComponent implements OnInit {
   cardsList$: Observable<any[]>;
   searchText: string;
 
@@ -26,5 +26,9 @@ export class HeroListComponent implements OnInit {
         return this.service.getHeroes();
       })
     );
+  }
+
+  async saverange($event: any) {
+    let val = $event.target.value;
   }
 }

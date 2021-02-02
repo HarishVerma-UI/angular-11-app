@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { HeroListComponent } from './card-list/hero-list.component';
+import { CardListComponent } from './card-list/card-list.component';
 import { CardDetailComponent } from './card-detail/card-detail.component';
 import { CardRoutingModule } from './card-routing.module';
 
@@ -13,7 +13,7 @@ import { CardRoutingModule } from './card-routing.module';
     CardRoutingModule,
   ],
   declarations: [
-    HeroListComponent,
+    CardListComponent,
     CardDetailComponent,
   ]
 })
