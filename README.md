@@ -1,5 +1,5 @@
 # angular-11-app
-<img src="https://https://raw.githubusercontent.com/harishwordpress/angular-11-app/master/img.png" />
+<img src="https://raw.githubusercontent.com/harishwordpress/angular-11-app/master/img.png" />
 <img  src="https://raw.githubusercontent.com/harishwordpress/angular-11-app/master/img_1.png" />
 
 
